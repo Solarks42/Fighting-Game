@@ -1378,7 +1378,7 @@ GameObject:
   - component: {fileID: 1240965284}
   - component: {fileID: 1240965285}
   m_Layer: 3
-  m_Name: RUp
+  m_Name: LUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1544,7 +1544,7 @@ GameObject:
   - component: {fileID: 1512184691}
   - component: {fileID: 1512184692}
   m_Layer: 3
-  m_Name: RDown
+  m_Name: LDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1656,7 +1656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1580812984}
   m_Layer: 3
-  m_Name: Right (1)
+  m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1775,6 +1775,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1746286661}
+  - component: {fileID: 1746286662}
   m_Layer: 3
   m_Name: SpriteAnim
   m_TagString: Untagged
@@ -1797,6 +1798,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1506945337}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1746286662
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746286660}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7e596201f2d836b40bece752c77f00ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1943940092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,11 +1892,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1943940092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4c5df2ab2435149849cf0113be8f9d, type: 3}
+  m_Script: {fileID: 11500000, guid: a175e17505bac104ea12943a9098e759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  jump: 400
+  jump: 200
   rb: {fileID: 1943940094}
   isJumping: 0
 --- !u!1 &2083544598
