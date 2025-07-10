@@ -4,13 +4,16 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed;
     public float jump;
-
     private float Move;
-
-    public Rigidbody2D rb;
     public bool isJumping;
 
-    void Start()  {   }
+    public Rigidbody2D rb;
+    private Animator Anim;
+    
+    void Start()
+    {
+        Anim = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -22,6 +25,16 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(new Vector2(rb.linearVelocity.x, jump));
         }
+
+        if (Move != 0)
+        {
+            Anim.SetBool("IsRunning", true);
+        }
+        else
+        {
+              Anim.SetBool("IsRunning", false);
+        }
+        
     }
     
     private void OnCollisionEnter2D(Collision2D other)
