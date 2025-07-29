@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,16 +10,16 @@ public class PlayerMovement : MonoBehaviour
     public bool isJumping;
 
     public Rigidbody2D rb;
-    private Animator Anim;
-    
+    public Animator Anim;
+    public SpriteRenderer SpriteRender;  
+
     void Start()
     {
-        Anim = GetComponent<Animator>();
     }
 
     void Update()
     {
-        Move = Input.GetAxisRaw("Horizontal");
+        float Move = Input.GetAxisRaw("Horizontal");
 
         rb.linearVelocity = new Vector2(speed * Move, rb.linearVelocity.y);
 
@@ -32,16 +34,27 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-              Anim.SetBool("IsRunning", false);
+            Anim.SetBool("IsRunning", false);
         }
-        
+
+        if (Move < 0)
+        {
+            SpriteRender.flipX = true;
+        }
+        if (Move > 0)
+        {
+            SpriteRender.flipX = false;
+        }
+
     }
-    
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Floor"))
         {
             isJumping = false;
+            Anim.SetBool("IsJumping", false);
+
         }
     }
 
@@ -50,10 +63,13 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Floor"))
         {
             isJumping = true;
+            Anim.SetBool("IsJumping", true);
         }
     }
-        
-   
+
+
+    
+
 }
 
 
