@@ -882,7 +882,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.22043209, g: 0.9137466, b: 0.8880421, a: 0}
+  m_BackGroundColor: {r: 0.76819396, g: 0.71539354, b: 0.76219416, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1648,7 +1648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1538381504
 Transform:
   m_ObjectHideFlags: 0
@@ -1801,7 +1801,7 @@ GameObject:
   - component: {fileID: 1943940095}
   - component: {fileID: 1943940096}
   m_Layer: 3
-  m_Name: Character
+  m_Name: Character(Knight)
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1866,7 +1866,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7.5
   jump: 550
-  isJumping: 0
+  isJumpingState: 0
+  isAttackingState: 0
   rb: {fileID: 1943940094}
   Anim: {fileID: 1506945339}
   SpriteRender: {fileID: 1506945338}
