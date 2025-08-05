@@ -1799,6 +1799,7 @@ GameObject:
   - component: {fileID: 1943940093}
   - component: {fileID: 1943940094}
   - component: {fileID: 1943940095}
+  - component: {fileID: 1943940096}
   m_Layer: 3
   m_Name: Character
   m_TagString: Player
@@ -1863,12 +1864,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a175e17505bac104ea12943a9098e759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
-  jump: 500
+  speed: 7.5
+  jump: 550
   isJumping: 0
   rb: {fileID: 1943940094}
   Anim: {fileID: 1506945339}
   SpriteRender: {fileID: 1506945338}
+--- !u!114 &1943940096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943940092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8847d043c356fb4e99175385f9c5d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2083544598
 GameObject:
   m_ObjectHideFlags: 0
