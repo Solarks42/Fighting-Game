@@ -6,12 +6,13 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed;
     public float jump;
-    private float Move;
     public bool isJumping;
 
     public Rigidbody2D rb;
     public Animator Anim;
-    public SpriteRenderer SpriteRender;  
+    public SpriteRenderer SpriteRender; 
+
+    private float Move;
 
     void Start()
     {
@@ -21,13 +22,15 @@ public class PlayerMovement : MonoBehaviour
     {
         float Move = Input.GetAxisRaw("Horizontal");
 
-        rb.linearVelocity = new Vector2(speed * Move, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(speed * Move, rb.linearVelocity.y) ;
 
         if (Input.GetButtonDown("Jump") && isJumping == false)
         {
             rb.AddForce(new Vector2(rb.linearVelocity.x, jump));
         }
 
+
+        // running anim
         if (Move != 0)
         {
             Anim.SetBool("IsRunning", true);
@@ -36,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Anim.SetBool("IsRunning", false);
         }
-
+        //character flipping 
         if (Move < 0)
         {
             SpriteRender.flipX = true;
@@ -47,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-
+    // floor collision
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Floor"))
